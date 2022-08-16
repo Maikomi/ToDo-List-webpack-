@@ -27,8 +27,12 @@ const addTask = () => {
     if (checkForDuplication(tasks)) return;
 
     const newTask = document.createElement("li");
-    newTask.innerHTML = `<article><h3>${newTaskName}</h3><p>${newTaskDescription}</p><div class ="check" onclick="taskDone(this)">&#10003</div><div class = "delete" onclick="removeTask(this)">&#10006</div></article>`;
-    // newTask.addEventListener("click", (event) => removeTask(event));
+    newTask.innerHTML = `<article><div class="taskText"><h3>${newTaskName}</h3><p>${newTaskDescription}</p></div><div class ="check"></div><div class = "delete"></div></article>`;
+    newTask.querySelector('.check').addEventListener("click", (event) => taskDone(event));
+    newTask.querySelector('.delete').addEventListener("click", (event) => removeTask(event));
+
+
+
     taskList.insertBefore(newTask, taskList.children[0]);
     const task = {
       name: newTaskName,
@@ -40,7 +44,7 @@ const addTask = () => {
       JSON.stringify([...JSON.parse(localStorage.getItem("tasks")), task])
     );
   }
-  // }
+  
 
   document.getElementById("name").value = "";
   document.getElementById("description").value = "";

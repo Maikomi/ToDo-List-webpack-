@@ -1,4 +1,5 @@
 import removeTask from "./removeTask";
+import taskDone from "./TaskDone";
 
 const loadTasks = () => {
   const taskList = document.querySelector("ul");
@@ -8,10 +9,13 @@ const loadTasks = () => {
 
   tasks.forEach((task) => {
     const li = document.createElement("li");
-    li.innerHTML = `<article><h3>${task.name}</h3><p>${task.description}</p><div class ="check" onclick="taskDone(this)"></div><div class = "delete" onclick="removeTask(this)"></div></article>`;
-    // li.addEventListener("click", (event) => removeTask(event));
+    li.innerHTML = `<article><div class="taskText"><h3>${task.name}</h3><p>${task.description}</p></div><div class ="check"></div><div class = "delete"></div></article>`;
+    li.querySelector('.check').addEventListener("click", (event) => taskDone(event));
+    li.querySelector('.delete').addEventListener("click", (event) => removeTask(event));
     taskList.insertBefore(li, taskList.children[0]);
   });
 };
+
+
 
 export default loadTasks;
