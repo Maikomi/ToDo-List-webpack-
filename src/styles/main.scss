@@ -1,0 +1,114 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F8F2EF;
+    font-family: 'Rubik', sans-serif;
+    display: grid;
+    grid-template-rows: 15rem auto;
+    grid-template-areas: "input"
+    "tasks";
+}
+
+.header{
+    grid-area: input;
+    border-radius: 30px;
+    border: #312F2F solid;
+    width: 25rem;
+    justify-self: center;
+    margin-block: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "textBox"
+    "inputBox";
+}
+
+.headerText{
+    background-color: #312F2F;
+    color: #F8F2EF;
+    text-align: center;
+    border-radius: 25px 25px 0px 0px;
+    grid-area: textBox;
+}
+
+.input{
+    grid-area: inputBox;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "name addBtn"
+    "description addBtn";
+}
+
+input{
+    margin: 0.5rem;
+    border-radius: 30px;
+    background-color: #827D7D;
+    border: transparent;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding-left: 1rem;
+    text-transform: capitalize;
+}
+
+input::placeholder{
+    color: #FFFFFF;
+}
+
+
+.name{
+    grid-area: name;
+}
+
+.description{
+    grid-area: description;
+}
+
+.addButton{
+    background-color: #827D7D;
+    background-image: url(../assets/Group.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem 2rem;
+    color: #F8F2EF;
+    grid-area: addBtn;
+    margin: 0.5rem;
+    border-radius: 30px;
+}
+
+h2{
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+ul{
+    grid-area: tasks;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 5rem;
+    gap: 1rem 3rem;
+    list-style-type: none;
+}
+
+li{
+    border-radius: 30px;
+    height: 5rem;
+    background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);
+}
+
+article{
+    display: flex;
+}
+
+.check{
+    height: 2rem;
+    width: 2rem;
+    background-color: #F2BAC9;
+    background-image: url(../assets/doneRed.svg);
+    background-size: contain;
+    border-radius: 10px;
+}
