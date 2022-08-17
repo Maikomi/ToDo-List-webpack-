@@ -1,0 +1,31 @@
+.dark{
+    background-color: #312F2F;
+}
+
+.dark .header{
+    border: #F8F2EF solid 0.4rem;
+}
+
+.dark .headerText{
+    background-color: #F8F2EF;
+    color: #312F2F;
+}
+
+.dark input{
+    font-size: 1rem;
+}
+
+.dark input::placeholder{
+    color: #312F2F;
+}
+
+
+.dark .addButton{
+    background-color: #827D7D;
+    background-image: url(../assets/addDark.svg);
+}
+
+.dark .darkMode{
+    border: #F8F2EF solid 0.4rem;
+    background-image: url(../assets/sun.svg);
+}
