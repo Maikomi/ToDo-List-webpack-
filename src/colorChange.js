@@ -3,6 +3,9 @@ const changeColor = () => {
     console.log(random);
     let x = '';
     switch (random){
+        case '0':
+            x = 'red'
+            break;
         case '1':
             x = 'blue'
             break;

@@ -126,8 +126,8 @@ article{
 .check{
     height: 3rem;
     width: 5rem;
-    background-color: #F2BAC9;
-    background-image: url(../assets/doneRed.svg);
+    // background-color: #F2BAC9;
+    // background-image: url(../assets/doneRed.svg);
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -139,8 +139,8 @@ article{
 .delete{
     height: 3rem;
     width: 5rem;
-    background-color: #F2BAC9;
-    background-image: url(../assets/binRed.svg);
+    // background-color: #F2BAC9;
+    // background-image: url(../assets/binRed.svg);
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -155,11 +155,15 @@ h3{
 }
 
 p{
-    color: #F2BAC9;
+    // color: #F2BAC9;
     width: 20ch;
     overflow-wrap: break-word;
 }
 
-.completed{
+.completed p, .completed h3{
     text-decoration: line-through;
+}
+
+.completed{
+    opacity: 60%;
 }

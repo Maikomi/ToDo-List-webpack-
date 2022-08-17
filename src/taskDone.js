@@ -1,5 +1,6 @@
 const taskDone = e => {
-  e.target.parentNode.children[0].classList.toggle("completed");
+  const parent = e.target.parentNode.parentNode;
+  parent.classList.toggle("completed");
   };
   
   export default taskDone;

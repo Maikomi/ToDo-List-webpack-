@@ -1,3 +1,21 @@
+.red{
+    background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);
+}
+
+.red .check{
+    background-color: #F2BAC9;
+    background-image: url(../assets/doneRed.svg);
+}
+
+.red .delete{
+    background-color: #F2BAC9;
+    background-image: url(../assets/binRed.svg);
+}
+
+.red p{
+    color: #F2BAC9;
+}
+
 
 .blue{
     background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);
