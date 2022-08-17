@@ -14,7 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var taskDone = function taskDone(e) {
   e.target.parentNode.children[0].classList.toggle("completed");
-  console.log(e.target.parentNode.children[0].classList);
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (taskDone);
@@ -99,8 +98,7 @@ var addTask = function addTask() {
     newTask.querySelector('.delete').addEventListener("click", function (event) {
       return (0,_removeTask__WEBPACK_IMPORTED_MODULE_0__["default"])(event);
     });
-    (0,_colorChange__WEBPACK_IMPORTED_MODULE_1__["default"])(newTask.querySelector('article'));
-    newTask.classList.add('gold');
+    newTask.classList = (0,_colorChange__WEBPACK_IMPORTED_MODULE_1__["default"])();
     console.log(newTask.classList);
     taskList.insertBefore(newTask, taskList.children[0]);
     var task = {
@@ -142,27 +140,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var changeColor = function changeColor(e) {
-  var random = Math.floor(Math.random() * 5);
+var changeColor = function changeColor() {
+  var random = Math.floor(Math.random() * 5).toString();
   console.log(random);
+  var x = '';
 
   switch (random) {
     case '1':
-      e.classList.add('blue');
+      x = 'blue';
       break;
 
     case '2':
-      e.classList.add('mint');
+      x = 'mint';
       break;
 
     case '3':
-      e.classList.add('gold');
+      x = 'gold';
       break;
 
     case '4':
-      e.classList.add('green');
+      x = 'green';
       break;
   }
+
+  return x;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (changeColor);
@@ -233,6 +234,52 @@ var removeTask = function removeTask(event) {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/colors.scss":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/colors.scss ***!
+  \*************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
+// Imports
+
+
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneBlue.svg */ "./src/assets/doneBlue.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binBlue.svg */ "./src/assets/binBlue.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneMint.svg */ "./src/assets/doneMint.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binMint.svg */ "./src/assets/binMint.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneGold.svg */ "./src/assets/doneGold.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binGold.svg */ "./src/assets/binGold.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneGreen.svg */ "./src/assets/doneGreen.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binGreen.svg */ "./src/assets/binGreen.svg"), __webpack_require__.b);
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
+var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
+var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);
+var ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_5___);
+var ___CSS_LOADER_URL_REPLACEMENT_6___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_6___);
+var ___CSS_LOADER_URL_REPLACEMENT_7___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_7___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".blue {\n  background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);\n}\n\n.blue .check {\n  background-color: #BAD7F2;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n.blue .delete {\n  background-color: #BAD7F2;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n\n.blue p {\n  color: #BAD7F2;\n}\n\n.mint {\n  background-image: linear-gradient(90deg, #19B26B 0%, #BAF2D8 100%);\n}\n\n.mint .check {\n  background-color: #BAF2D8;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n}\n\n.mint .delete {\n  background-color: #BAF2D8;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n}\n\n.mint p {\n  color: #BAF2D8;\n}\n\n.gold {\n  background-image: linear-gradient(90deg, #B28719 0%, #F2E2BA 100%);\n}\n\n.gold .check {\n  background-color: #F2E2BA;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\n}\n\n.gold .delete {\n  background-color: #F2E2BA;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\n}\n\n.gold p {\n  color: #F2E2BA;\n}\n\n.green {\n  background-image: linear-gradient(90deg, #1AB41D 0%, #BAF2BB 100%);\n}\n\n.green .check {\n  background-color: #BAF2BB;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\n}\n\n.green .delete {\n  background-color: #BAF2BB;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ");\n}\n\n.green p {\n  color: #BAF2BB;\n}", "",{"version":3,"sources":["webpack://./src/styles/colors.scss"],"names":[],"mappings":"AACA;EACI,mEAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,cAAA;AAAJ;;AAGA;EACI,kEAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,cAAA;AAAJ;;AAGA;EACI,kEAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,cAAA;AAAJ;;AAGA;EACI,kEAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,yBAAA;EACA,yDAAA;AAAJ;;AAGA;EACI,cAAA;AAAJ","sourcesContent":["\r\n.blue{\r\n    background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);\r\n}\r\n\r\n.blue .check{\r\n    background-color: #BAD7F2;\r\n    background-image: url(../assets/doneBlue.svg);\r\n}\r\n\r\n.blue .delete{\r\n    background-color: #BAD7F2;\r\n    background-image: url(../assets/binBlue.svg);\r\n}\r\n\r\n.blue p{\r\n    color: #BAD7F2;\r\n}\r\n\r\n.mint{\r\n    background-image: linear-gradient(90deg, #19B26B 0%, #BAF2D8 100%);\r\n}\r\n\r\n.mint .check{\r\n    background-color: #BAF2D8;\r\n    background-image: url(../assets/doneMint.svg);\r\n}\r\n\r\n.mint .delete{\r\n    background-color: #BAF2D8;\r\n    background-image: url(../assets/binMint.svg);\r\n}\r\n\r\n.mint p{\r\n    color: #BAF2D8;\r\n}\r\n\r\n.gold{\r\n    background-image: linear-gradient(90deg, #B28719 0%, #F2E2BA 100%);\r\n}\r\n\r\n.gold .check{\r\n    background-color: #F2E2BA;\r\n    background-image: url(../assets/doneGold.svg);\r\n}\r\n\r\n.gold .delete{\r\n    background-color: #F2E2BA;\r\n    background-image: url(../assets/binGold.svg);\r\n}\r\n\r\n.gold p{\r\n    color: #F2E2BA;\r\n}\r\n\r\n.green{\r\n    background-image:  linear-gradient(90deg, #1AB41D 0%, #BAF2BB 100%);\r\n}\r\n\r\n.green .check{\r\n    background-color: #BAF2BB;\r\n    background-image: url(../assets/doneGreen.svg);\r\n}\r\n\r\n.green .delete{\r\n    background-color: #BAF2BB;\r\n    background-image: url(../assets/binGreen.svg);\r\n}\r\n\r\n.green p{\r\n    color: #BAF2BB;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
@@ -257,28 +304,12 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/Group.svg */ "./src/assets/Group.svg"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneRed.svg */ "./src/assets/doneRed.svg"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binRed.svg */ "./src/assets/binRed.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneBlue.svg */ "./src/assets/doneBlue.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binBlue.svg */ "./src/assets/binBlue.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneMint.svg */ "./src/assets/doneMint.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binMint.svg */ "./src/assets/binMint.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneGold.svg */ "./src/assets/doneGold.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binGold.svg */ "./src/assets/binGold.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/doneGreen.svg */ "./src/assets/doneGreen.svg"), __webpack_require__.b);
-var ___CSS_LOADER_URL_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/binGreen.svg */ "./src/assets/binGreen.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
-var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_3___);
-var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_4___);
-var ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_5___);
-var ___CSS_LOADER_URL_REPLACEMENT_6___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_6___);
-var ___CSS_LOADER_URL_REPLACEMENT_7___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_7___);
-var ___CSS_LOADER_URL_REPLACEMENT_8___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_8___);
-var ___CSS_LOADER_URL_REPLACEMENT_9___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_9___);
-var ___CSS_LOADER_URL_REPLACEMENT_10___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_10___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #F8F2EF;\n  font-family: \"Rubik\", sans-serif;\n  display: grid;\n  grid-template-rows: 15rem auto;\n  grid-template-areas: \"input\" \"tasks\";\n}\n\n.header {\n  grid-area: input;\n  border-radius: 30px;\n  border: #312F2F solid 0.4rem;\n  width: 25rem;\n  justify-self: center;\n  margin-block: 2rem;\n  display: grid;\n  grid-template-rows: 1fr 2fr;\n  grid-template-areas: \"textBox\" \"inputBox\";\n}\n\n.headerText {\n  background-color: #312F2F;\n  color: #F8F2EF;\n  text-align: center;\n  border-radius: 20px 20px 0px 0px;\n  grid-area: textBox;\n}\n\nh2 {\n  padding-block: 0.5rem;\n  font-size: 2.5rem;\n  font-weight: 500;\n}\n\n.input {\n  grid-area: inputBox;\n  display: grid;\n  grid-template-columns: 6fr 1fr;\n  grid-template-rows: repeat(2, 1fr);\n  grid-template-areas: \"name addBtn\" \"description addBtn\";\n}\n\ninput {\n  margin: 0.5rem;\n  border-radius: 30px;\n  background-color: #827D7D;\n  border: transparent;\n  color: #FFFFFF;\n  font-size: 1rem;\n  padding-left: 1rem;\n  text-transform: capitalize;\n}\n\ninput::placeholder {\n  color: #FFFFFF;\n}\n\n.name {\n  grid-area: name;\n}\n\n.description {\n  grid-area: description;\n}\n\n.addButton {\n  background-color: #827D7D;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 2rem 2rem;\n  color: #F8F2EF;\n  grid-area: addBtn;\n  margin: 0.5rem;\n  border-radius: 30px;\n}\n\nul {\n  grid-area: tasks;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin-inline: 5rem;\n  gap: 1rem 3rem;\n  list-style-type: none;\n}\n\nli {\n  border-radius: 30px;\n  height: 5rem;\n  background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);\n}\n\narticle {\n  display: grid;\n  grid-template-columns: auto 5rem 5rem;\n  column-gap: 1rem;\n  margin: 1rem;\n}\n\n.check {\n  height: 3rem;\n  width: 5rem;\n  background-color: #F2BAC9;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: 2rem;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 30px;\n  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\n}\n\n.delete {\n  height: 3rem;\n  width: 5rem;\n  background-color: #F2BAC9;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n  background-size: 2rem;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 30px;\n  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\n}\n\nh3 {\n  color: black;\n  text-transform: capitalize;\n}\n\np {\n  color: #F2BAC9;\n  width: 20ch;\n  overflow-wrap: break-word;\n}\n\n.blue {\n  background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);\n}\n\n.blue .check {\n  background-color: #BAD7F2;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n}\n\n.blue .delete {\n  background-color: #BAD7F2;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\n}\n\n.mint {\n  background-image: linear-gradient(90deg, #19B26B 0%, #BAF2D8 100%);\n}\n\n.mint .check {\n  background-color: #BAF2D8;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\n}\n\n.mint .delete {\n  background-color: #BAF2D8;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_6___ + ");\n}\n\n.gold {\n  background-image: linear-gradient(90deg, #B28719 0%, #F2E2BA 100%);\n}\n\n.gold .check {\n  background-color: #F2E2BA;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_7___ + ");\n}\n\n.gold .check {\n  background-color: #F2E2BA;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_8___ + ");\n}\n\n.green {\n  background-image: linear-gradient(90deg, #1AB41D 0%, #BAF2BB 100%);\n}\n\n.green .check {\n  background-color: #BAF2BB;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_9___ + ");\n}\n\n.green .delete {\n  background-color: #BAF2BB;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_10___ + ");\n}\n\n.completed {\n  text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,SAAA;EACA,UAAA;AACJ;;AAEA;EACI,yBAAA;EACA,gCAAA;EACA,aAAA;EACA,8BAAA;EACA,oCAAA;AACJ;;AAGA;EACI,gBAAA;EACA,mBAAA;EACA,4BAAA;EACA,YAAA;EACA,oBAAA;EACA,kBAAA;EACA,aAAA;EACA,2BAAA;EACA,yCAAA;AAAJ;;AAIA;EACI,yBAAA;EACA,cAAA;EACA,kBAAA;EACA,gCAAA;EACA,kBAAA;AADJ;;AAIA;EACI,qBAAA;EACA,iBAAA;EACA,gBAAA;AADJ;;AAIA;EACI,mBAAA;EACA,aAAA;EACA,8BAAA;EACA,kCAAA;EACA,uDAAA;AADJ;;AAKA;EACI,cAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,cAAA;EACA,eAAA;EACA,kBAAA;EACA,0BAAA;AAFJ;;AAKA;EACI,cAAA;AAFJ;;AAMA;EACI,eAAA;AAHJ;;AAMA;EACI,sBAAA;AAHJ;;AAMA;EACI,yBAAA;EACA,yDAAA;EACA,4BAAA;EACA,2BAAA;EACA,0BAAA;EACA,cAAA;EACA,iBAAA;EACA,cAAA;EACA,mBAAA;AAHJ;;AAQA;EACI,gBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,cAAA;EACA,qBAAA;AALJ;;AAQA;EACI,mBAAA;EACA,YAAA;EACA,kEAAA;AALJ;;AAQA;EACI,aAAA;EACA,qCAAA;EACA,gBAAA;EACA,YAAA;AALJ;;AAQA;EACI,YAAA;EACA,WAAA;EACA,yBAAA;EACA,yDAAA;EACA,qBAAA;EACA,4BAAA;EACA,2BAAA;EACA,mBAAA;EACA,2FAAA;AALJ;;AASA;EACI,YAAA;EACA,WAAA;EACA,yBAAA;EACA,yDAAA;EACA,qBAAA;EACA,4BAAA;EACA,2BAAA;EACA,mBAAA;EACA,2FAAA;AANJ;;AAUA;EACI,YAAA;EACA,0BAAA;AAPJ;;AAUA;EACI,cAAA;EACA,WAAA;EACA,yBAAA;AAPJ;;AAUA;EACI,mEAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,kEAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,kEAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,kEAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,yDAAA;AAPJ;;AAUA;EACI,yBAAA;EACA,0DAAA;AAPJ;;AAUA;EACI,6BAAA;AAPJ","sourcesContent":["*, *::before, *::after {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody{\r\n    background-color: #F8F2EF;\r\n    font-family: 'Rubik', sans-serif;\r\n    display: grid;\r\n    grid-template-rows: 15rem auto;\r\n    grid-template-areas: \"input\"\r\n    \"tasks\";\r\n}\r\n\r\n.header{\r\n    grid-area: input;\r\n    border-radius: 30px;\r\n    border: #312F2F solid 0.4rem;\r\n    width: 25rem;\r\n    justify-self: center;\r\n    margin-block: 2rem;\r\n    display: grid;\r\n    grid-template-rows: 1fr 2fr;\r\n    grid-template-areas: \"textBox\"\r\n    \"inputBox\";\r\n}\r\n\r\n.headerText{\r\n    background-color: #312F2F;\r\n    color: #F8F2EF;\r\n    text-align: center;\r\n    border-radius: 20px 20px 0px 0px;\r\n    grid-area: textBox;\r\n}\r\n\r\nh2{\r\n    padding-block: 0.5rem;\r\n    font-size: 2.5rem;\r\n    font-weight: 500;\r\n}\r\n\r\n.input{\r\n    grid-area: inputBox;\r\n    display: grid;\r\n    grid-template-columns: 6fr 1fr;\r\n    grid-template-rows: repeat(2, 1fr);\r\n    grid-template-areas: \"name addBtn\"\r\n    \"description addBtn\";\r\n}\r\n\r\ninput{\r\n    margin: 0.5rem;\r\n    border-radius: 30px;\r\n    background-color: #827D7D;\r\n    border: transparent;\r\n    color: #FFFFFF;\r\n    font-size: 1rem;\r\n    padding-left: 1rem;\r\n    text-transform: capitalize;\r\n}\r\n\r\ninput::placeholder{\r\n    color: #FFFFFF;\r\n}\r\n\r\n\r\n.name{\r\n    grid-area: name;\r\n}\r\n\r\n.description{\r\n    grid-area: description;\r\n}\r\n\r\n.addButton{\r\n    background-color: #827D7D;\r\n    background-image: url(../assets/Group.svg);\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 2rem 2rem;\r\n    color: #F8F2EF;\r\n    grid-area: addBtn;\r\n    margin: 0.5rem;\r\n    border-radius: 30px;\r\n}\r\n\r\n\r\n\r\nul{\r\n    grid-area: tasks;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    margin-inline: 5rem;\r\n    gap: 1rem 3rem;\r\n    list-style-type: none;\r\n}\r\n\r\nli{\r\n    border-radius: 30px;\r\n    height: 5rem;\r\n    background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);\r\n}\r\n\r\narticle{\r\n    display: grid;\r\n    grid-template-columns: auto 5rem 5rem;\r\n    column-gap: 1rem;\r\n    margin: 1rem;\r\n}\r\n\r\n.check{\r\n    height: 3rem;\r\n    width: 5rem;\r\n    background-color: #F2BAC9;\r\n    background-image: url(../assets/doneRed.svg);\r\n    background-size: 2rem;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 30px;\r\n    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\r\n    \r\n}\r\n\r\n.delete{\r\n    height: 3rem;\r\n    width: 5rem;\r\n    background-color: #F2BAC9;\r\n    background-image: url(../assets/binRed.svg);\r\n    background-size: 2rem;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 30px;\r\n    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\r\n    \r\n}\r\n\r\nh3{\r\n    color: black;\r\n    text-transform: capitalize;\r\n}\r\n\r\np{\r\n    color: #F2BAC9;\r\n    width: 20ch;\r\n    overflow-wrap: break-word;\r\n}\r\n\r\n.blue{\r\n    background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);\r\n}\r\n\r\n.blue .check{\r\n    background-color: #BAD7F2;\r\n    background-image: url(../assets/doneBlue.svg);\r\n}\r\n\r\n.blue .delete{\r\n    background-color: #BAD7F2;\r\n    background-image: url(../assets/binBlue.svg);\r\n}\r\n\r\n.mint{\r\n    background-image: linear-gradient(90deg, #19B26B 0%, #BAF2D8 100%);\r\n}\r\n\r\n.mint .check{\r\n    background-color: #BAF2D8;\r\n    background-image: url(../assets/doneMint.svg);\r\n}\r\n\r\n.mint .delete{\r\n    background-color: #BAF2D8;\r\n    background-image: url(../assets/binMint.svg);\r\n}\r\n\r\n.gold{\r\n    background-image: linear-gradient(90deg, #B28719 0%, #F2E2BA 100%);\r\n}\r\n\r\n.gold .check{\r\n    background-color: #F2E2BA;\r\n    background-image: url(../assets/doneGold.svg);\r\n}\r\n\r\n.gold .check{\r\n    background-color: #F2E2BA;\r\n    background-image: url(../assets/binGold.svg);\r\n}\r\n\r\n.green{\r\n    background-image:  linear-gradient(90deg, #1AB41D 0%, #BAF2BB 100%);\r\n}\r\n\r\n.green .check{\r\n    background-color: #BAF2BB;\r\n    background-image: url(../assets/doneGreen.svg);\r\n}\r\n\r\n.green .delete{\r\n    background-color: #BAF2BB;\r\n    background-image: url(../assets/binGreen.svg);\r\n}\r\n\r\n.completed{\r\n    text-decoration: line-through;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*, *::before, *::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: #F8F2EF;\n  font-family: \"Rubik\", sans-serif;\n  display: grid;\n  grid-template-rows: 15rem auto;\n  grid-template-areas: \"input\" \"tasks\";\n}\n\n.header {\n  grid-area: input;\n  border-radius: 30px;\n  border: #312F2F solid 0.4rem;\n  width: 25rem;\n  justify-self: center;\n  margin-block: 2rem;\n  display: grid;\n  grid-template-rows: 1fr 2fr;\n  grid-template-areas: \"textBox\" \"inputBox\";\n}\n\n.headerText {\n  background-color: #312F2F;\n  color: #F8F2EF;\n  text-align: center;\n  border-radius: 20px 20px 0px 0px;\n  grid-area: textBox;\n}\n\nh2 {\n  padding-block: 0.5rem;\n  font-size: 2.5rem;\n  font-weight: 500;\n}\n\n.input {\n  grid-area: inputBox;\n  display: grid;\n  grid-template-columns: 6fr 1fr;\n  grid-template-rows: repeat(2, 1fr);\n  grid-template-areas: \"name addBtn\" \"description addBtn\";\n}\n\ninput {\n  margin: 0.5rem;\n  border-radius: 30px;\n  background-color: #827D7D;\n  border: transparent;\n  color: #FFFFFF;\n  font-size: 1rem;\n  padding-left: 1rem;\n  text-transform: capitalize;\n}\n\ninput::placeholder {\n  color: #FFFFFF;\n}\n\n.name {\n  grid-area: name;\n}\n\n.description {\n  grid-area: description;\n}\n\n.addButton {\n  background-color: #827D7D;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 2rem 2rem;\n  color: #F8F2EF;\n  grid-area: addBtn;\n  margin: 0.5rem;\n  border-radius: 30px;\n}\n\nul {\n  grid-area: tasks;\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  margin-inline: 5rem;\n  gap: 1rem 3rem;\n  list-style-type: none;\n}\n\nli {\n  border-radius: 30px;\n  height: 5rem;\n  background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);\n}\n\narticle {\n  display: grid;\n  grid-template-columns: auto 5rem 5rem;\n  column-gap: 1rem;\n  margin: 1rem;\n}\n\n.check {\n  height: 3rem;\n  width: 5rem;\n  background-color: #F2BAC9;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n  background-size: 2rem;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 30px;\n  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\n}\n\n.delete {\n  height: 3rem;\n  width: 5rem;\n  background-color: #F2BAC9;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\n  background-size: 2rem;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 30px;\n  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\n}\n\nh3 {\n  color: black;\n  text-transform: capitalize;\n}\n\np {\n  color: #F2BAC9;\n  width: 20ch;\n  overflow-wrap: break-word;\n}\n\n.completed {\n  text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACI,sBAAA;EACA,SAAA;EACA,UAAA;AACJ;;AAEA;EACI,yBAAA;EACA,gCAAA;EACA,aAAA;EACA,8BAAA;EACA,oCAAA;AACJ;;AAGA;EACI,gBAAA;EACA,mBAAA;EACA,4BAAA;EACA,YAAA;EACA,oBAAA;EACA,kBAAA;EACA,aAAA;EACA,2BAAA;EACA,yCAAA;AAAJ;;AAIA;EACI,yBAAA;EACA,cAAA;EACA,kBAAA;EACA,gCAAA;EACA,kBAAA;AADJ;;AAIA;EACI,qBAAA;EACA,iBAAA;EACA,gBAAA;AADJ;;AAIA;EACI,mBAAA;EACA,aAAA;EACA,8BAAA;EACA,kCAAA;EACA,uDAAA;AADJ;;AAKA;EACI,cAAA;EACA,mBAAA;EACA,yBAAA;EACA,mBAAA;EACA,cAAA;EACA,eAAA;EACA,kBAAA;EACA,0BAAA;AAFJ;;AAKA;EACI,cAAA;AAFJ;;AAMA;EACI,eAAA;AAHJ;;AAMA;EACI,sBAAA;AAHJ;;AAMA;EACI,yBAAA;EACA,yDAAA;EACA,4BAAA;EACA,2BAAA;EACA,0BAAA;EACA,cAAA;EACA,iBAAA;EACA,cAAA;EACA,mBAAA;AAHJ;;AAQA;EACI,gBAAA;EACA,aAAA;EACA,8BAAA;EACA,mBAAA;EACA,cAAA;EACA,qBAAA;AALJ;;AAQA;EACI,mBAAA;EACA,YAAA;EACA,kEAAA;AALJ;;AAQA;EACI,aAAA;EACA,qCAAA;EACA,gBAAA;EACA,YAAA;AALJ;;AAQA;EACI,YAAA;EACA,WAAA;EACA,yBAAA;EACA,yDAAA;EACA,qBAAA;EACA,4BAAA;EACA,2BAAA;EACA,mBAAA;EACA,2FAAA;AALJ;;AASA;EACI,YAAA;EACA,WAAA;EACA,yBAAA;EACA,yDAAA;EACA,qBAAA;EACA,4BAAA;EACA,2BAAA;EACA,mBAAA;EACA,2FAAA;AANJ;;AAUA;EACI,YAAA;EACA,0BAAA;AAPJ;;AAUA;EACI,cAAA;EACA,WAAA;EACA,yBAAA;AAPJ;;AAWA;EACI,6BAAA;AARJ","sourcesContent":["*, *::before, *::after {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\nbody{\r\n    background-color: #F8F2EF;\r\n    font-family: 'Rubik', sans-serif;\r\n    display: grid;\r\n    grid-template-rows: 15rem auto;\r\n    grid-template-areas: \"input\"\r\n    \"tasks\";\r\n}\r\n\r\n.header{\r\n    grid-area: input;\r\n    border-radius: 30px;\r\n    border: #312F2F solid 0.4rem;\r\n    width: 25rem;\r\n    justify-self: center;\r\n    margin-block: 2rem;\r\n    display: grid;\r\n    grid-template-rows: 1fr 2fr;\r\n    grid-template-areas: \"textBox\"\r\n    \"inputBox\";\r\n}\r\n\r\n.headerText{\r\n    background-color: #312F2F;\r\n    color: #F8F2EF;\r\n    text-align: center;\r\n    border-radius: 20px 20px 0px 0px;\r\n    grid-area: textBox;\r\n}\r\n\r\nh2{\r\n    padding-block: 0.5rem;\r\n    font-size: 2.5rem;\r\n    font-weight: 500;\r\n}\r\n\r\n.input{\r\n    grid-area: inputBox;\r\n    display: grid;\r\n    grid-template-columns: 6fr 1fr;\r\n    grid-template-rows: repeat(2, 1fr);\r\n    grid-template-areas: \"name addBtn\"\r\n    \"description addBtn\";\r\n}\r\n\r\ninput{\r\n    margin: 0.5rem;\r\n    border-radius: 30px;\r\n    background-color: #827D7D;\r\n    border: transparent;\r\n    color: #FFFFFF;\r\n    font-size: 1rem;\r\n    padding-left: 1rem;\r\n    text-transform: capitalize;\r\n}\r\n\r\ninput::placeholder{\r\n    color: #FFFFFF;\r\n}\r\n\r\n\r\n.name{\r\n    grid-area: name;\r\n}\r\n\r\n.description{\r\n    grid-area: description;\r\n}\r\n\r\n.addButton{\r\n    background-color: #827D7D;\r\n    background-image: url(../assets/Group.svg);\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    background-size: 2rem 2rem;\r\n    color: #F8F2EF;\r\n    grid-area: addBtn;\r\n    margin: 0.5rem;\r\n    border-radius: 30px;\r\n}\r\n\r\n\r\n\r\nul{\r\n    grid-area: tasks;\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    margin-inline: 5rem;\r\n    gap: 1rem 3rem;\r\n    list-style-type: none;\r\n}\r\n\r\nli{\r\n    border-radius: 30px;\r\n    height: 5rem;\r\n    background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);\r\n}\r\n\r\narticle{\r\n    display: grid;\r\n    grid-template-columns: auto 5rem 5rem;\r\n    column-gap: 1rem;\r\n    margin: 1rem;\r\n}\r\n\r\n.check{\r\n    height: 3rem;\r\n    width: 5rem;\r\n    background-color: #F2BAC9;\r\n    background-image: url(../assets/doneRed.svg);\r\n    background-size: 2rem;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 30px;\r\n    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\r\n    \r\n}\r\n\r\n.delete{\r\n    height: 3rem;\r\n    width: 5rem;\r\n    background-color: #F2BAC9;\r\n    background-image: url(../assets/binRed.svg);\r\n    background-size: 2rem;\r\n    background-repeat: no-repeat;\r\n    background-position: center;\r\n    border-radius: 30px;\r\n    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.2), -8px -8px 12px 0 rgba(255, 255, 255, 0.25);\r\n    \r\n}\r\n\r\nh3{\r\n    color: black;\r\n    text-transform: capitalize;\r\n}\r\n\r\np{\r\n    color: #F2BAC9;\r\n    width: 20ch;\r\n    overflow-wrap: break-word;\r\n}\r\n\r\n\r\n.completed{\r\n    text-decoration: line-through;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -465,6 +496,61 @@ module.exports = function (item) {
 
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./src/styles/colors.scss":
+/*!********************************!*\
+  !*** ./src/styles/colors.scss ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_colors_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./colors.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/colors.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_colors_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_colors_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_colors_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_colors_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
 
 /***/ }),
 
@@ -1101,9 +1187,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _loadTasks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadTasks */ "./src/loadTasks.js");
 /* harmony import */ var _addTask__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./addTask */ "./src/addTask.js");
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _clearAll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./clearAll */ "./src/clearAll.js");
-/* harmony import */ var _clearAll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_clearAll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_colors_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/colors.scss */ "./src/styles/colors.scss");
+/* harmony import */ var _clearAll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./clearAll */ "./src/clearAll.js");
+/* harmony import */ var _clearAll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_clearAll__WEBPACK_IMPORTED_MODULE_4__);
 var addButton = document.getElementById("addButton");
+
 
 
 
@@ -1111,9 +1199,9 @@ var addButton = document.getElementById("addButton");
 addButton.addEventListener("click", _addTask__WEBPACK_IMPORTED_MODULE_1__["default"]);
 window.addEventListener("load", _loadTasks__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var btn = document.getElementById("die");
-btn.addEventListener("click", (_clearAll__WEBPACK_IMPORTED_MODULE_3___default()));
+btn.addEventListener("click", (_clearAll__WEBPACK_IMPORTED_MODULE_4___default()));
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlee34c5d8c6d652d024cc7.js.map
+//# sourceMappingURL=bundleb8f00fbffb770ca78576.js.map
