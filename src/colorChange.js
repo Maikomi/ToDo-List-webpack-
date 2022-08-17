@@ -1,19 +1,22 @@
-const changeColor = e => {
-    const random = Math.floor(Math.random() * 5)
+const changeColor = () => {
+    const random = Math.floor(Math.random() * 5).toString()
+    console.log(random);
+    let x = '';
     switch (random){
         case '1':
-            e.classList.add('blue');
+            x = 'blue'
             break;
         case '2':
-            e.classList.add('mint');
+            x = 'mint'
             break;
         case '3':
-            e.classList.add('gold');
+            x = 'gold'
             break;
         case '4':
-            e.classList.add('green');
+            x = 'green'
             break;
     }
+    return x;
 }
 
 export default changeColor;

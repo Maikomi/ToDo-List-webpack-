@@ -1,4 +1,5 @@
 import removeTask from "./removeTask";
+import colorChange from "./colorChange"
 
 const addTask = () => {
   const taskList = document.querySelector("ul");
@@ -30,8 +31,8 @@ const addTask = () => {
     newTask.innerHTML = `<article><div class="taskText"><h3>${newTaskName}</h3><p>${newTaskDescription}</p></div><div class ="check"></div><div class = "delete"></div></article>`;
     newTask.querySelector('.check').addEventListener("click", (event) => taskDone(event));
     newTask.querySelector('.delete').addEventListener("click", (event) => removeTask(event));
-
-
+    newTask.classList = colorChange();
+    console.log(newTask.classList);
 
     taskList.insertBefore(newTask, taskList.children[0]);
     const task = {
