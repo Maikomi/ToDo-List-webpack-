@@ -1,16 +1,16 @@
 const addButton = document.getElementById("addButton");
-const darkModeButton = document.getElementById('darkMode');
+const darkModeButton = document.getElementById("darkMode");
 
 import loadTasks from "./loadTasks";
-import addTask from "./addTask";
-import './styles/main.scss'
-import './styles/colors.scss'
-import './styles/darkMode.scss'
-import darkMode from './darkMode'
+import addNewTask from "./addNewTask";
+import "./styles/main.scss";
+import "./styles/colors.scss";
+import "./styles/darkMode.scss";
+import changeLightDarkMode from "./changeLightDarkMode";
 // import clearAll from "./clearAll"
 
-addButton.addEventListener("click", addTask);
-darkModeButton.addEventListener('click', darkMode)
+addButton.addEventListener("click", addNewTask);
+darkModeButton.addEventListener("click", changeLightDarkMode);
 window.addEventListener("load", loadTasks);
 
 // const btn = document.getElementById("die");

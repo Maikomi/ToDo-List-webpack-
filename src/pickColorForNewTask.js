@@ -1,4 +1,4 @@
-const changeColor = () => {
+const pickColorForNewTask = () => {
     const random = Math.floor(Math.random() * 5).toString()
     console.log(random);
     let x = '';
@@ -22,4 +22,4 @@ const changeColor = () => {
     return x;
 }
 
-export default changeColor;
+export default pickColorForNewTask;

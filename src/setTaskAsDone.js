@@ -1,8 +1,6 @@
-const taskDone = e => {
+const setTaskAsDone = (e) => {
   const parent = e.target.parentNode.parentNode;
   parent.classList.toggle("completed");
-  };
-  
-  export default taskDone;
+};
 
-  
+export default setTaskAsDone;

@@ -40,7 +40,7 @@ body{
     "inputBox";
 }
 
-.headerText{
+.header-text{
     background-color: #312F2F;
     color: #F8F2EF;
     text-align: center;
@@ -166,4 +166,25 @@ p{
 
 .completed{
     opacity: 60%;
+}
+
+@media (max-width: 950px){
+
+    .header{
+        width: 20rem;
+        margin-block: 2rem;
+    }
+
+    .input{
+        grid-template-columns: 5fr 1fr;
+    }
+
+    ul{
+        margin: auto;
+        grid-area: tasks;
+        display: flex;
+        flex-direction: column;
+
+        list-style-type: none;
+    }
 }

@@ -1,8 +1,8 @@
 import removeTask from "./removeTask";
-import colorChange from "./colorChange"
-import taskDone from "./taskDone";
+import pickColorForNewTask from "./pickColorForNewTask";
+import setTaskAsDone from "./setTaskAsDone";
 
-const addTask = () => {
+const addNewTask = () => {
   const taskList = document.querySelector("ul");
   if (!localStorage.getItem("tasks")) {
     localStorage.setItem("tasks", JSON.stringify([]));
@@ -30,9 +30,9 @@ const addTask = () => {
 
     const newTask = document.createElement("li");
     newTask.innerHTML = `<article><div class="taskText"><h3>${newTaskName}</h3><p>${newTaskDescription}</p></div><div class ="check"></div><div class = "delete"></div></article>`;
-    newTask.querySelector('.check').addEventListener("click", (event) => taskDone(event));
-    newTask.querySelector('.delete').addEventListener("click", (event) => removeTask(event));
-    const color = colorChange()
+    newTask.querySelector(".check").addEventListener("click", (event) => setTaskAsDone(event));
+    newTask.querySelector(".delete").addEventListener("click", (event) => removeTask(event));
+    const color = pickColorForNewTask();
     newTask.classList.add(color);
 
     taskList.insertBefore(newTask, taskList.children[0]);
@@ -47,10 +47,9 @@ const addTask = () => {
       JSON.stringify([...JSON.parse(localStorage.getItem("tasks")), task])
     );
   }
-  
 
   document.getElementById("name").value = "";
   document.getElementById("description").value = "";
 };
 
-export default addTask;
+export default addNewTask;
