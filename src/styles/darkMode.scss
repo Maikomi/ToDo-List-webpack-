@@ -1,36 +1,35 @@
 .dark{
     background-color: #312F2F;
-}
 
-.dark .header{
-    border: #F8F2EF solid 0.4rem;
-    box-shadow: -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
-}
+    .header{
+        border: #F8F2EF solid 0.4rem;
+        box-shadow: -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
+    }
 
-.dark .header-text{
-    background-color: #F8F2EF;
-    color: #312F2F;
-}
+    .header__text{
+        background-color: #F8F2EF;
+        color: #312F2F;
+    }
 
-.dark input{
-    font-size: 1rem;
-}
+    input{
+        font-size: 1rem;
+    }
 
-.dark input::placeholder{
-    color: #312F2F;
-}
+    input::placeholder{
+        color: #312F2F;
+    }
 
+    .input__addButton{
+        background-color: #827D7D;
+        background-image: url(../assets/addDark.svg);
+    }
 
-.dark .addButton{
-    background-color: #827D7D;
-    background-image: url(../assets/addDark.svg);
-}
+    .darkMode{
+        border: #F8F2EF solid 0.4rem;
+        background-image: url(../assets/sun.svg);
+    }
 
-.dark .darkMode{
-    border: #F8F2EF solid 0.4rem;
-    background-image: url(../assets/sun.svg);
-}
-
-.dark li{
-    box-shadow: -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
+    li{
+        box-shadow: -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
+    }
 }

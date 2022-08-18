@@ -11,7 +11,6 @@ const removeTask = (event) => {
   
   tasks = tasks.filter(isDifferentThanId);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-
 };
 
 export default removeTask;

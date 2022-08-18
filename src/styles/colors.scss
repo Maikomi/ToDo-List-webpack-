@@ -1,90 +1,89 @@
 .red{
     background-image: linear-gradient(90deg, #B21942 0%, #F2BAC9 100%);
-}
 
-.red .check{
-    background-color: #F2BAC9;
-    background-image: url(../assets/doneRed.svg);
-}
+    .check{
+        background-color: #F2BAC9;
+        background-image: url(../assets/doneRed.svg);
+    }
 
-.red .delete{
-    background-color: #F2BAC9;
-    background-image: url(../assets/binRed.svg);
-}
+    .delete{
+        background-color: #F2BAC9;
+        background-image: url(../assets/binRed.svg);
+    }
 
-.red p{
-    color: #F2BAC9;
+    p{
+        color: #F2BAC9;
+    }
 }
-
 
 .blue{
     background-image: linear-gradient(270deg, #BAD7F2 0%, #1969B2 100%);
-}
 
-.blue .check{
-    background-color: #BAD7F2;
-    background-image: url(../assets/doneBlue.svg);
-}
+    .check{
+        background-color: #BAD7F2;
+        background-image: url(../assets/doneBlue.svg);
+    }
 
-.blue .delete{
-    background-color: #BAD7F2;
-    background-image: url(../assets/binBlue.svg);
-}
+    .delete{
+        background-color: #BAD7F2;
+        background-image: url(../assets/binBlue.svg);
+    }
 
-.blue p{
-    color: #BAD7F2;
+    p{
+        color: #BAD7F2;
+    }
 }
 
 .mint{
     background-image: linear-gradient(90deg, #19B26B 0%, #BAF2D8 100%);
-}
 
-.mint .check{
-    background-color: #BAF2D8;
-    background-image: url(../assets/doneMint.svg);
-}
-
-.mint .delete{
-    background-color: #BAF2D8;
-    background-image: url(../assets/binMint.svg);
-}
-
-.mint p{
-    color: #BAF2D8;
+    .check{
+        background-color: #BAF2D8;
+        background-image: url(../assets/doneMint.svg);
+    }
+    
+    .delete{
+        background-color: #BAF2D8;
+        background-image: url(../assets/binMint.svg);
+    }
+    
+    p{
+        color: #BAF2D8;
+    }
 }
 
 .gold{
     background-image: linear-gradient(90deg, #B28719 0%, #F2E2BA 100%);
-}
 
-.gold .check{
-    background-color: #F2E2BA;
-    background-image: url(../assets/doneGold.svg);
-}
-
-.gold .delete{
-    background-color: #F2E2BA;
-    background-image: url(../assets/binGold.svg);
-}
-
-.gold p{
-    color: #F2E2BA;
+    .check{
+        background-color: #F2E2BA;
+        background-image: url(../assets/doneGold.svg);
+    }
+    
+    .delete{
+        background-color: #F2E2BA;
+        background-image: url(../assets/binGold.svg);
+    }
+    
+    p{
+        color: #F2E2BA;
+    }
 }
 
 .green{
     background-image:  linear-gradient(90deg, #1AB41D 0%, #BAF2BB 100%);
-}
 
-.green .check{
-    background-color: #BAF2BB;
-    background-image: url(../assets/doneGreen.svg);
-}
-
-.green .delete{
-    background-color: #BAF2BB;
-    background-image: url(../assets/binGreen.svg);
-}
-
-.green p{
-    color: #BAF2BB;
+    .check{
+        background-color: #BAF2BB;
+        background-image: url(../assets/doneGreen.svg);
+    }
+    
+    .delete{
+        background-color: #BAF2BB;
+        background-image: url(../assets/binGreen.svg);
+    }
+    
+    p{
+        color: #BAF2BB;
+    }
 }
