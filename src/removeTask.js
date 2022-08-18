@@ -1,14 +1,17 @@
 const removeTask = (event) => {
   let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  const wholeTask = event.target.parentElement.parentElement;
+  const id = wholeTask.getAttribute('id');
 
-  tasks.forEach((task) => {
-    if (task.name == event.target.parentNode.children[0].children[0].innerHTML) {
-      tasks.splice(tasks.indexOf(task), 1);
-    }
-  });
+  document.getElementById(id).remove();
+
+  const isDifferentThanId = value => {
+     return value.myId != id
+  }
+  
+  tasks = tasks.filter(isDifferentThanId);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-  event.target.parentElement.parentElement.remove();
-  event.target.parentElement.remove();
+
 };
 
 export default removeTask;

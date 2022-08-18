@@ -13,5 +13,6 @@ addButton.addEventListener("click", addNewTask);
 darkModeButton.addEventListener("click", changeLightDarkMode);
 window.addEventListener("load", loadTasks);
 
+
 // const btn = document.getElementById("die");
 // btn.addEventListener("click", clearAll);

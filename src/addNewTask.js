@@ -3,9 +3,10 @@ import pickColorForNewTask from "./pickColorForNewTask";
 import setTaskAsDone from "./setTaskAsDone";
 
 const addNewTask = () => {
+  let id = ''
   const taskList = document.querySelector("ul");
-  if (!localStorage.getItem("tasks")) {
-    localStorage.setItem("tasks", JSON.stringify([]));
+  if (taskList.childNodes.length === 0) {
+    id = '0'
   }
   const newTaskName = document.getElementById("name").value;
   const newTaskDescription = document.getElementById("description").value;
@@ -28,18 +29,28 @@ const addNewTask = () => {
 
     if (checkForDuplication(tasks)) return;
 
+    if(id == ''){
+      const lengthOfArr = tasks.length;
+      const index = lengthOfArr - 1;
+      const lastTask = tasks[index];
+      const lastId = Number(lastTask.myId);
+      const newId = lastId + 1;
+      id = newId.toString();
+    }
+
     const newTask = document.createElement("li");
     newTask.innerHTML = `<article><div class="taskText"><h3>${newTaskName}</h3><p>${newTaskDescription}</p></div><div class ="check"></div><div class = "delete"></div></article>`;
     newTask.querySelector(".check").addEventListener("click", (event) => setTaskAsDone(event));
     newTask.querySelector(".delete").addEventListener("click", (event) => removeTask(event));
     const color = pickColorForNewTask();
     newTask.classList.add(color);
-
+    newTask.setAttribute('id', id);
     taskList.insertBefore(newTask, taskList.children[0]);
     const task = {
       name: newTaskName,
       description: newTaskDescription,
       color: color,
+      myId: id,
     };
 
     localStorage.setItem(

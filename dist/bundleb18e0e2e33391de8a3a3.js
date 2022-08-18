@@ -34,10 +34,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 var addNewTask = function addNewTask() {
+  var id = '';
   var taskList = document.querySelector("ul");
 
   if (!localStorage.getItem("tasks")) {
     localStorage.setItem("tasks", JSON.stringify([]));
+    id = '0';
   }
 
   var newTaskName = document.getElementById("name").value;
@@ -73,6 +75,17 @@ var addNewTask = function addNewTask() {
     };
 
     if (checkForDuplication(tasks)) return;
+
+    if (id == '') {
+      var lengthOfArr = tasks.length;
+      var index = lengthOfArr - 1;
+      var lastTask = tasks[index];
+      var lastId = Number(lastTask.myId);
+      console.log(lastId);
+      var newId = lastId + 1;
+      id = newId.toString();
+    }
+
     var newTask = document.createElement("li");
     newTask.innerHTML = "<article><div class=\"taskText\"><h3>".concat(newTaskName, "</h3><p>").concat(newTaskDescription, "</p></div><div class =\"check\"></div><div class = \"delete\"></div></article>");
     newTask.querySelector(".check").addEventListener("click", function (event) {
@@ -83,11 +96,13 @@ var addNewTask = function addNewTask() {
     });
     var color = (0,_pickColorForNewTask__WEBPACK_IMPORTED_MODULE_1__["default"])();
     newTask.classList.add(color);
+    newTask.setAttribute('id', id);
     taskList.insertBefore(newTask, taskList.children[0]);
     var task = {
       name: newTaskName,
       description: newTaskDescription,
-      color: color
+      color: color,
+      myId: id
     };
     localStorage.setItem("tasks", JSON.stringify([].concat(_toConsumableArray(JSON.parse(localStorage.getItem("tasks"))), [task])));
   }
@@ -132,7 +147,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _setTaskAsDone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./setTaskAsDone */ "./src/setTaskAsDone.js");
 
 
-console.log(_setTaskAsDone__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 var loadTasks = function loadTasks() {
   var taskList = document.querySelector("ul");
@@ -148,6 +162,7 @@ var loadTasks = function loadTasks() {
     li.querySelector(".delete").addEventListener("click", function (event) {
       return (0,_removeTask__WEBPACK_IMPORTED_MODULE_0__["default"])(event);
     });
+    li.setAttribute('id', task.myId);
     taskList.insertBefore(li, taskList.children[0]);
   });
 };
@@ -168,7 +183,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var pickColorForNewTask = function pickColorForNewTask() {
   var random = Math.floor(Math.random() * 5).toString();
-  console.log(random);
   var x = '';
 
   switch (random) {
@@ -212,6 +226,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var removeTask = function removeTask(event) {
   var tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  console.log(event.target.parentElement.parentElement);
   tasks.forEach(function (task) {
     if (task.name == event.target.parentNode.children[0].children[0].innerHTML) {
       tasks.splice(tasks.indexOf(task), 1);
@@ -1312,4 +1327,4 @@ window.addEventListener("load", _loadTasks__WEBPACK_IMPORTED_MODULE_0__["default
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle34c18fee0f2f119ddc90.js.map
+//# sourceMappingURL=bundleb18e0e2e33391de8a3a3.js.map

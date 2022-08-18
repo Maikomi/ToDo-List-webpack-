@@ -1,6 +1,5 @@
 const pickColorForNewTask = () => {
-    const random = Math.floor(Math.random() * 5).toString()
-    console.log(random);
+    const random = Math.floor(Math.random() * 5).toString();
     let x = '';
     switch (random){
         case '0':
