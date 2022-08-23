@@ -10,14 +10,21 @@ const addNewTask = () => {
   }
   const newTaskName = document.getElementById("name").value;
   const newTaskDescription = document.getElementById("description").value;
-  if (newTaskName == "") {
+  if (newTaskName === "") {
     alert("Please name you task");
   } else {
-    let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 
+    let tasks = [];
+    const json = JSON.parse(localStorage.getItem("tasks"));
+    if(json){
+      tasks = Array.from(json);
+    }else{
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+    
     const checkForDuplication = (tasks) => {
       for (let task of tasks) {
-        if (task.name == newTaskName) {
+        if (task.name === newTaskName) {
           alert("task already exist");
           document.getElementById("name").value = "";
           document.getElementById("description").value = "";

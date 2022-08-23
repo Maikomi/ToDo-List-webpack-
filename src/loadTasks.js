@@ -4,7 +4,7 @@ const loadTasks = () => {
   const taskList = document.querySelector("ul");
   if (localStorage.getItem("tasks") == null) return;
 
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
 
   tasks.forEach((task) => {
     const li = document.createElement("li");

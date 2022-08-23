@@ -1,5 +1,5 @@
 const removeTask = (event) => {
-  let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
   const wholeTask = event.target.parentElement.parentElement;
   const id = wholeTask.getAttribute('id');
 
