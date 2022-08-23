@@ -3,7 +3,7 @@ import pickColorForNewTask from "./pickColorForNewTask";
 import setTaskAsDone from "./setTaskAsDone";
 
 const addNewTask = () => {
-  let id = "";
+  let id;
   const taskList = document.querySelector("ul");
   if (taskList.childNodes.length === 0) {
     id = "0";
@@ -35,7 +35,7 @@ const addNewTask = () => {
 
     if (checkForDuplication(tasks)) return;
 
-    if (id == "") {
+    if (id === "") {
       const lengthOfArr = tasks.length;
       const index = lengthOfArr - 1;
       const lastTask = tasks[index];

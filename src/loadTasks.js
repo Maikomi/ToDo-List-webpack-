@@ -2,7 +2,7 @@ import removeTask from "./removeTask";
 import setTaskAsDone from "./setTaskAsDone";
 const loadTasks = () => {
   const taskList = document.querySelector("ul");
-  if (localStorage.getItem("tasks") == null) return;
+  if (localStorage.getItem("tasks") === null) return;
 
   let tasks = JSON.parse(localStorage.getItem("tasks"));
 

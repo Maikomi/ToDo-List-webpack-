@@ -34,20 +34,27 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 var addNewTask = function addNewTask() {
-  var id = '';
+  var id;
   var taskList = document.querySelector("ul");
 
   if (taskList.childNodes.length === 0) {
-    id = '0';
+    id = "0";
   }
 
   var newTaskName = document.getElementById("name").value;
   var newTaskDescription = document.getElementById("description").value;
 
-  if (newTaskName == "") {
+  if (newTaskName === "") {
     alert("Please name you task");
   } else {
-    var tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+    var tasks = [];
+    var json = JSON.parse(localStorage.getItem("tasks"));
+
+    if (json) {
+      tasks = Array.from(json);
+    } else {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
 
     var checkForDuplication = function checkForDuplication(tasks) {
       var _iterator = _createForOfIteratorHelper(tasks),
@@ -57,7 +64,7 @@ var addNewTask = function addNewTask() {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var _task = _step.value;
 
-          if (_task.name == newTaskName) {
+          if (_task.name === newTaskName) {
             alert("task already exist");
             document.getElementById("name").value = "";
             document.getElementById("description").value = "";
@@ -75,12 +82,13 @@ var addNewTask = function addNewTask() {
 
     if (checkForDuplication(tasks)) return;
 
-    if (id == '') {
+    if (id === "") {
       var lengthOfArr = tasks.length;
       var index = lengthOfArr - 1;
       var lastTask = tasks[index];
+      console.log(lastTask);
       var lastId = Number(lastTask.myId);
-      var newId = lastId + 1;
+      var newId = ++lastId;
       id = newId.toString();
     }
 
@@ -94,7 +102,7 @@ var addNewTask = function addNewTask() {
     });
     var color = (0,_pickColorForNewTask__WEBPACK_IMPORTED_MODULE_1__["default"])();
     newTask.classList.add(color);
-    newTask.setAttribute('id', id);
+    newTask.setAttribute("id", id);
     taskList.insertBefore(newTask, taskList.children[0]);
     var task = {
       name: newTaskName,
@@ -148,8 +156,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var loadTasks = function loadTasks() {
   var taskList = document.querySelector("ul");
-  if (localStorage.getItem("tasks") == null) return;
-  var tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  if (localStorage.getItem("tasks") === null) return;
+  var tasks = JSON.parse(localStorage.getItem("tasks"));
   tasks.forEach(function (task) {
     var li = document.createElement("li");
     li.classList.add(task.color);
@@ -181,7 +189,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var pickColorForNewTask = function pickColorForNewTask() {
   var random = Math.floor(Math.random() * 5).toString();
-  var x = '';
+  var x;
 
   switch (random) {
     case '0':
@@ -223,7 +231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var removeTask = function removeTask(event) {
-  var tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
+  var tasks = JSON.parse(localStorage.getItem("tasks"));
   var wholeTask = event.target.parentElement.parentElement;
   var id = wholeTask.getAttribute('id');
   document.getElementById(id).remove();
@@ -1309,14 +1317,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_colors_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/colors.scss */ "./src/styles/colors.scss");
 /* harmony import */ var _styles_darkMode_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/darkMode.scss */ "./src/styles/darkMode.scss");
 /* harmony import */ var _changeLightDarkMode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./changeLightDarkMode */ "./src/changeLightDarkMode.js");
+
+
+
+
+
+
 var addButton = document.getElementById("addButton");
 var darkModeButton = document.getElementById("darkMode");
-
-
-
-
-
-
 addButton.addEventListener("click", _addNewTask__WEBPACK_IMPORTED_MODULE_1__["default"]);
 darkModeButton.addEventListener("click", _changeLightDarkMode__WEBPACK_IMPORTED_MODULE_5__["default"]);
 window.addEventListener("load", _loadTasks__WEBPACK_IMPORTED_MODULE_0__["default"]);
@@ -1324,4 +1332,4 @@ window.addEventListener("load", _loadTasks__WEBPACK_IMPORTED_MODULE_0__["default
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle03fc7b4e00d58a9c5911.js.map
+//# sourceMappingURL=bundle83ce3949db2bdd65e25f.js.map
